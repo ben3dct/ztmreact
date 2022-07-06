@@ -22,15 +22,12 @@ class App extends Component {
     };
 
     render() {
-        console.log("render");
         const { entities, searchField } = this.state;
         const { onSearchChange } = this;
 
         const filteredEntities = entities.filter((entity) =>
             entity.name.toLocaleLowerCase().includes(searchField)
         );
-        console.log(searchField);
-        console.log(filteredEntities);
         return (
             <div className='container'>
                 <input
